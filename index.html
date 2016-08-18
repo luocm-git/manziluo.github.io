@@ -1,10 +1,10 @@
 
-#记一个简单的编译问题 by luocm-git
+#记一个简单的编译问题 by luocm-git#
 
 error: reference to 'Message' is ambiguous
 error: candidates are: class google::protobuf::Message
-error: candidates are: class google::protobuf::Message</p>
+error: candidates are: class google::protobuf::Message
 
 
 
-##由于被编译的cpp文件包含了pb头文件，并使用了using namespace google::protobuf 将google::protobuf下面的类名Message引入到了全局namespace,又因为该cpp引用另一个头文件有一个全局namespace中定义的Message类，所以报了如上错误。
+##由于被编译的cpp文件包含了pb头文件，并使用了using namespace google::protobuf 将google::protobuf下面的类名Message引入到了全局namespace,又因为该cpp引用另一个头文件有一个全局namespace中定义的Message类，所以报了如上错误。##

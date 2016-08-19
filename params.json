@@ -1,6 +1,6 @@
 {
   "name": "记一个简单的编译问题",
   "tagline": "namespace;reference to 'Message' is ambiguous;",
-  "body": "报错信息\r\nerror: reference to 'Message' is ambiguous\r\nerror: candidates are: class google::protobuf::Message\r\nerror: candidates are: class google::protobuf::Message\r\n\r\njjj\r\n由于被编译的cpp文件包含了pb头文件，并使用了using namespace google::protobuf 将google::protobuf下面的类名Message引入到了全局namespace,又因为该cpp引用另一个头文件有一个全局namespace中定义的Message类，所以报了如上错误。\r\n",
+  "body": "#报错信息\r\n\r\n-error: reference to 'Message' is ambiguous\r\n-error: candidates are: class google::protobuf::Message\r\n-error: candidates are: class google::protobuf::Message\r\n\r\n\r\n###由于被编译的cpp文件包含了pb头文件，并使用了using namespace google::protobuf 将google::protobuf下面的类名Message引入到了全局###namespace,又因为该cpp引用另一个头文件有一个全局namespace中定义的Message类，所以报了如上错误。\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
